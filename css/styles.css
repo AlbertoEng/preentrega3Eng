@@ -19,7 +19,7 @@
   border: none;
   font-size: 1.5rem; }
 
-.input-email, main .container-contacto--left form input {
+.input-email, main .container-contacto--left form input, main .container-contacto--left form .articulos {
   padding: 10px;
   border-radius: 10px;
   border: none; }
@@ -277,6 +277,11 @@ main {
           width: 80%;
           min-width: 400px;
           font-size: 1.2rem; }
+        main .container-contacto--left form .articulos {
+          width: 80%;
+          min-width: 400px;
+          font-size: 1.2rem;
+          resize: none; }
         main .container-contacto--left form .boton-enviar {
           padding: 1.5rem 3rem;
           background-color: #8f46f0;
