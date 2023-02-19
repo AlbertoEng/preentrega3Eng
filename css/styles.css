@@ -22,7 +22,8 @@
 .input-email, main .container-contacto--left form input, main .container-contacto--left form .articulos {
   padding: 10px;
   border-radius: 10px;
-  border: none; }
+  border: none;
+  font-family: 'Lato'; }
 
 * {
   margin: 0px;
