@@ -1,0 +1,6 @@
+
+@mixin custom-boton( $fondo, $forecolor ) {
+    padding: 1.5rem 3rem;
+    background-color: $fondo;
+    color: $forecolor;
+}

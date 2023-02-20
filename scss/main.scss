@@ -1,0 +1,626 @@
+@import "./variables/variables";
+@import "./components/button";
+@import "./components/input";
+@import "./extends/input-email.scss";
+@import "./mixins/customBoton";
+
+//  estilos generales para RESET
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+// empezamos estilos generales
+a {
+    text-decoration: none;
+}
+
+
+li {
+    list-style: none;
+}
+
+a:hover {
+    color: darken($color-purple,10%);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-color: $color-dark-fondo;
+    color: white;
+}
+
+
+// ESTILOS PARA EL HEADER
+header{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    max-height: 250px;
+
+    & .marca-container {
+        flex: 3;
+        padding-top: 20px;
+        padding-left: 50px;
+
+      
+
+        & h1 {
+            font-size: 3rem;
+            color: $color-purple;
+        }
+
+        & h2 {
+            font-size: 2rem;
+            width: 450px;
+            min-width: 400px;
+        }
+
+    }
+
+    & .menu-container {
+        flex: 2;
+        margin: 15px 10px;
+        background-color: $color-dark-tarjetas;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 100px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
+        
+
+
+        &--icono {
+            display: none;
+        }
+
+        & ul {
+            list-style: none;
+            display: flex;
+            margin: 0px;
+
+            & li {
+                margin-right: 5px;
+                display: inline-block;
+                padding: 10px;
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 20px;
+                color: $color-purple;
+            }
+            & li:hover {
+                color: lighten($color-purple,20%);
+            }
+
+        }
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        & {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            max-height: 100%;
+        }
+
+        & .marca-container{
+            grid-column: 1/2;
+            grid-row: 2;
+            margin-bottom: 20px;
+            padding: 0px;
+            max-height: 200px;
+
+      
+
+            & h1 {
+                text-align: center;
+                font-size: 60px;
+            }
+
+            & h2 {
+                margin-top: 10px;
+                width: 100%;
+                text-align: center;
+                font-size: 25px;
+            }
+        }
+
+        & .menu-container {
+            max-height: 120px;
+            grid-column: 1/2;
+            grid-row: 1;
+            padding: 10px;
+            position: relative;
+
+            &--icono {
+                display: block;
+                margin-left: 20px;
+            }
+            
+            & ul {
+                border-radius: 0px;
+                display: none;
+            }
+
+            & .menu_popup {
+                background-color: $color-dark-tarjetas;
+                display: block;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                left: 0px;
+                border-radius: 10px;
+                border: 1px solid grey;
+
+                & a li {
+                    width: 100%;
+                    text-align: center;
+                }
+
+            }
+
+
+
+        }
+    }
+
+}
+
+//  ESTILOS PARA MAIN 
+main{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    padding: 10px;
+
+    & .left-section {
+        max-width: 650px;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            width: 100%;
+        }
+
+
+    }
+
+    & .rigth-section {
+        flex: 1;
+
+        & div {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & input {
+                padding: 1rem;
+                border-radius: 100px;
+                border: none;
+                width: 50%;
+                font-size: 1rem;
+                text-align: center;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+
+        }
+
+        & h3 {
+            font-size: 2rem;
+            text-align: center;
+            width: 60%;
+        }
+
+        & p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        &{
+            flex-direction: column;
+            width: 100%;
+        }
+
+        & .left-section {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        & .rigth-section{
+            margin-top: 20px;
+
+            & div input {
+                margin: 10px;
+                width: 70%;
+            }
+
+            & div h3 {
+                width: 100%;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            & div p {
+                display: none;
+            }
+        }
+    }
+
+
+    //  ESTILOS PARA PAGINA PRODUCTOS -- MAIN NADAMAS
+
+    & .section-productos{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    & section .lista-productos {
+        width: 90%;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+
+        @media screen and (max-width: 1500px) {
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,1fr);
+            width: 80%;
+
+            & .item-productos:nth-child(1){
+                grid-column: 1/2;
+                grid-row: 1/2;
+                justify-self: center;
+            }
+            & .item-productos:nth-child(2){
+                grid-column: 2/3;
+                grid-row: 1/2;
+                justify-self: center;
+            }
+            & .item-productos:nth-child(3){
+                grid-column: 1/2;
+                grid-row: 2/3;
+                justify-self: center;
+            }
+            & .item-productos:nth-child(4){
+                grid-column: 2/3;
+                grid-row: 2/3;
+                justify-self: center;
+            }
+
+            & .item-productos .precio {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+        }
+
+        @media screen and (max-width: 731px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4,1fr);
+            gap: 10px;
+            width: 100%;
+
+            & .item-productos:nth-child(1){
+                grid-column: 1/2;
+                grid-row: 1/2;
+                justify-self: center;
+                width: 95%;
+                margin-bottom: 30px;
+            }
+            & .item-productos:nth-child(2){
+                grid-column: 1/2;
+                grid-row: 2/3;
+                justify-self: center;
+                width: 95%;
+                margin-bottom: 30px;
+            }
+            & .item-productos:nth-child(3){
+                grid-column: 1/2;
+                grid-row: 3/4;
+                justify-self: center;
+                width: 95%;
+                margin-bottom: 30px;
+            }
+            & .item-productos:nth-child(4){
+                grid-column: 1/2;
+                grid-row: 4/5;
+                justify-self: center;
+                width: 95%;
+                margin-bottom: 30px;
+            }
+
+            & .item-productos .precio {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+        }
+
+    }
+
+    // estilos para pagina contacto
+    & .container-contacto{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+
+
+        &--left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+
+            & form {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+
+                & .mensaje-inicial {
+                    font-size: 1.2rem;
+                    margin: 20px;
+                }
+
+                & input {
+                    width: 80%;
+                    min-width: 400px;
+                    font-size: 1.2rem;
+                    @extend .input-email;
+                }
+
+                & .articulos {
+                    width: 80%;
+                    min-width: 400px;
+                    font-size: 1.2rem;
+                    @extend .input-email;
+                    resize: none;
+
+
+
+
+                }
+                
+                & .boton-enviar {
+                    @include custom-boton($color-purple, white);
+                }
+            }
+
+        }
+
+        &--right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            width: 100%;
+
+            & iframe {
+                border-radius: 20px;
+                width: 100%;
+            }
+
+            & .direccion {
+                margin-top: 20px;
+            }
+            & .celular {
+                margin-top: 10px;
+            }
+
+        }
+
+        @media screen and (max-width: 1090px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+
+
+
+
+    }
+
+
+
+    & .item-productos{
+        background-color: $color-dark-tarjetas;
+        border-radius: 30px;
+        padding: 20px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & img{
+            width: 280px;
+            max-height:280px;
+        }
+
+        & h2 {
+            align-self: flex-start;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        & .descripcion {
+            font-size: 20px;
+            text-align: justify;
+            align-self: flex-start;
+            flex: 1;
+        }
+
+        & .precio {
+            font-size: 30px;
+            font-weight: bold;
+
+            &--valor{
+                color: $color-purple;
+            }
+
+        }
+
+        & .boton-comprar{
+            padding: 1rem 3rem;
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+            border: none;
+            font-weight: bold
+            ;
+        }
+
+    }
+
+    // ESTILOS PARA PAGINA PLANES
+    & .section-planes{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    & .lista-planes{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+        
+        &--plan{
+            width: 350px;
+            background: linear-gradient(to bottom, $color-dark-tarjetas,$color-dark-fondo);
+            text-align: center;
+            border-radius: 30px;
+            box-shadow: 2px 2px 6px rgba(36, 36, 36, 0.589);
+            padding: 3rem;
+            // border: 1px solid purple;
+
+            & h3{
+                font-size: 2rem;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            & p {
+                margin-top: 10px;
+            }
+
+            & .precio {
+                font-size: 1.3rem;
+                margin-bottom: 3rem;
+
+                & span{
+                    color: $color-purple;
+                    font-weight: bold;
+                    font-size: 2rem;
+                }
+            }
+
+
+        }
+    }
+
+    // ESTILOS BLOG
+    & .section-blog{
+        width: 60%;
+
+
+        & article {
+            padding: 2rem;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 5rem;
+            background-color: $color-dark-tarjetas;
+
+            & div img {
+                width: 100%;
+                margin-top: 2rem;
+                margin-bottom: 5rem;
+            }
+        }
+
+
+        @media screen and (max-width:1200px) {
+
+            width: 100%;
+            & article {
+                width: 100%;
+            }
+        }
+    
+
+    }
+
+
+
+
+}
+
+// ESTILOS FOOTER
+footer{
+    flex: 1;
+    max-height: 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    & .contenedor {
+
+        border-radius: 100px;
+        background-color: $color-dark-tarjetas;
+        display: flex;
+        padding: 1.2rem;
+        min-width: 500px;
+        justify-content: center;
+        gap: 20px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.603);
+        transition: 0.1s;
+        margin-right: 10px;
+
+        & a li:hover {
+            transform: scale(1.08);
+            transition: 0.1s;
+        }
+
+
+    }
+    @media screen and (max-width: 1200px) {
+
+        & .container{
+            width: 100%;
+            min-width: 100%;
+            margin: 10px 0px;
+        }
+        & a li img{
+            height: 30px;
+        }
+    }
+
+}
+
+
+

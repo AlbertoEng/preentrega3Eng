@@ -1,0 +1,19 @@
+
+@import '../variables/variables';
+
+.btn {
+    background-color: $color-purple;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    margin: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: darken($color-purple, 10%);
+    transition: 0.2s;
+    cursor: pointer;
+}
