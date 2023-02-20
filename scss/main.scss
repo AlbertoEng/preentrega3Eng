@@ -52,7 +52,7 @@ header{
       
 
         & h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: $color-purple;
         }
 
@@ -599,7 +599,6 @@ footer{
         gap: 20px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.603);
         transition: 0.1s;
-        margin-right: 10px;
 
         & a li:hover {
             transform: scale(1.08);
@@ -611,9 +610,8 @@ footer{
     @media screen and (max-width: 1200px) {
 
         & .container{
-            width: 100%;
+            width: 80%;
             min-width: 100%;
-            margin: 10px 0px;
         }
         & a li img{
             height: 30px;

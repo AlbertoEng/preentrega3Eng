@@ -57,7 +57,7 @@ header {
     padding-top: 20px;
     padding-left: 50px; }
     header .marca-container h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #8f46f0; }
     header .marca-container h2 {
       font-size: 2rem;
@@ -403,15 +403,13 @@ footer {
     justify-content: center;
     gap: 20px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.603);
-    transition: 0.1s;
-    margin-right: 10px; }
+    transition: 0.1s; }
     footer .contenedor a li:hover {
       transform: scale(1.08);
       transition: 0.1s; }
   @media screen and (max-width: 1200px) {
     footer .container {
-      width: 100%;
-      min-width: 100%;
-      margin: 10px 0px; }
+      width: 80%;
+      min-width: 100%; }
     footer a li img {
       height: 30px; } }
