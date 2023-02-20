@@ -53,7 +53,7 @@
 
         <section class="section-blog">
             <article>
-                <h3>Introduccion al IOT. <span> --12/febrero/2023</span></h3>
+                <h2>Introduccion al IOT. <span> --12/febrero/2023</span></h2>
                 <div>
                     <img class="rounded-5" src="https://i.pinimg.com/736x/4c/e2/a0/4ce2a0285d287e102edbfb5988f6e8ab.jpg" class="img-fluid" alt="">
                 </div>
@@ -72,20 +72,25 @@
                 </div>
             </article>
             <article>
-                <h3>Radiofrecuencia con modulos NRF24l01.<span> --12/febrero/2023</span></h3>
+                <h2>Radiofrecuencia con modulos NRF24l01.<span> --12/febrero/2023</span></h2>
                 <div>
                     <img class="rounded-5" src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2015/08/nrf-where-to-buy.jpg?w=550&quality=100&strip=all&ssl=1" class="img-fluid" alt="">
                 </div>
                 <div>
-                    <p class="fs-4">These RF modules are very popular among the Arduino tinkerers. The nRF24L01 is used on a wide variety of applications that require wireless control. They are transceivers which this means that each module can transmit and receive data..</p>
-                    <p class="fs-4">These modules are very cheap and you can use them with any microcontroller (MCU).</p>
-                    <p class="fs-4">You can purchase these modules for just a few dollars. Click here to compare the nRF24L01 module on several stores and find the best price. They come in two versions with external antenna (more range) or built-in antenna (less range).</p>
-                    <p class="fs-4">You can use the preceding links or go directly to MakerAdvisor.com/tools to find all the parts for your projects at the best price!</p>
-                    
+                    <p class="fs-4">El NRF24L01 es un chip de comunicación inalámbrica fabricado por Nordic Semiconductor que podemos conectar a un procesador como Arduino</p>
+                    <p class="fs-4">El NRF24L01 integra un transceptor RF (transmisor + receptor) a una frecuencia entre 2.4GHz a 2.5GHz, una banda libre para uso gratuito. La velocidad de transmisión es configurable entre 250 Kbps, 1Mbps, y 2 Mbps y permite la conexión simultánea con hasta 6 dispositivos.</p>
+                    <p class="fs-4">El NRF24L01 también incorpora la lógica necesaria para que la comunicación sea robusta, como corrección de errores y reenvío de datos si es necesario, liberando de esta tarea al procesador. El control del módulo se realiza a través de bus SPI, por lo que es sencillo controlarlo desde un procesador como Arduino.</p>
+                    <p class="fs-4">La banda de frecuencia es de 2400 a 2525 MHz, pudiendo elegir entre 125 canales espaciados a razón de 1MHz. Se recomienda usar las frecuencias de 2501 a 2525 MHz para evitar interferencias con las redes Wifi.</p>
+                    <p class="fs-4">La tensión de alimentación del NRF24L01 es de 1.9 a 3.6V, aunque los pines de datos son tolerantes a 5V. El consumo eléctrico en Stand By es bajo, y de unos 15mA durante el envío y recepción. Lógicamente, el consumo del módulo es superior, pudiendo llegar hasta 150-250 mA en modelos con antenas más potentes.</p>
+                    <p class="fs-4">Existen dos versiones de módulos que montan el NRF24L01, uno con antena integrada en forma de zig-zag y un alcance máximo de 20-30 metros, y la versión de alta potencia que incorpora amplificador y antena externa, con un alcance máximo de 700-1000 metros.</p>
+                    <p class="fs-4">Sin embargo, el alcance real se ve limitado por muchos factores, incluso en condiciones visibilidad directa sin obstáculos. Con el módulo de antena integrada y alimentación desde Arduino y velocidad de transmisión de 2 Mbps el alcance será apenas de 2-3 metros.</p>
+                    <p class="fs-4">Un factor de gran impacto en el alcance es la alimentación del módulo. Para conseguir el máximo alcance conviene alimentar el módulo con una fuente externa de 3.3V, estable y con potencia suficiente.</p>
+                    <h3>Esquema de montaje:</h3>
+                    <img src="https://1.bp.blogspot.com/-ZjCA9n3eiLk/WcPn-QnZgWI/AAAAAAAAMSE/oR3r97OmMgsQtpIdaliSN8VzSw8UVL37ACLcBGAs/s1600/NRF2401_conexi%25C3%25B3n_Arduino.png" alt="esquema de montaje nrf24l01">
                 </div>
             </article>
             <article>
-                <h3>Encender LEDS con control remoto IR.<span> --10/febrero/2023</span></h3>
+                <h2>Encender LEDS con control remoto IR.<span> --10/febrero/2023</span></h2>
                 <div>
                     <img class="rounded-5" src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2013/02/control-led-with-remote.jpg?w=700&quality=100&strip=all&ssl=1" class="img-fluid" alt="">
                 </div>
