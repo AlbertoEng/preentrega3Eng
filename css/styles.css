@@ -398,8 +398,7 @@ footer {
     border-radius: 100px;
     background-color: #131313;
     display: flex;
-    padding: 1.2rem;
-    min-width: 500px;
+    padding: 1.2rem 5rem;
     justify-content: center;
     gap: 20px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.603);
@@ -408,8 +407,8 @@ footer {
       transform: scale(1.08);
       transition: 0.1s; }
   @media screen and (max-width: 1200px) {
-    footer .container {
-      width: 80%;
+    footer .contenedor {
+      width: 100%;
       min-width: 100%; }
     footer a li img {
       height: 30px; } }

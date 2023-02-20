@@ -593,8 +593,7 @@ footer{
         border-radius: 100px;
         background-color: $color-dark-tarjetas;
         display: flex;
-        padding: 1.2rem;
-        min-width: 500px;
+        padding: 1.2rem 5rem;
         justify-content: center;
         gap: 20px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.603);
@@ -609,8 +608,8 @@ footer{
     }
     @media screen and (max-width: 1200px) {
 
-        & .container{
-            width: 80%;
+        & .contenedor{
+            width: 100%;
             min-width: 100%;
         }
         & a li img{
