@@ -44,7 +44,7 @@ body {
   flex-direction: column;
   height: 100vh;
   font-family: 'Lato', sans-serif;
-  background-color: #141414;
+  background-color: #1B1A1A;
   color: white; }
 
 header {
@@ -57,16 +57,16 @@ header {
     padding-top: 20px;
     padding-left: 50px; }
     header .marca-container h1 {
-      font-size: 5rem;
+      font-size: 3rem;
       color: #8f46f0; }
     header .marca-container h2 {
-      font-size: 3rem;
+      font-size: 2rem;
       width: 450px;
       min-width: 400px; }
   header .menu-container {
     flex: 2;
     margin: 15px 10px;
-    background-color: #292929;
+    background-color: #131313;
     justify-content: center;
     padding: 20px;
     border-radius: 100px;
@@ -75,7 +75,8 @@ header {
       display: none; }
     header .menu-container ul {
       list-style: none;
-      display: flex; }
+      display: flex;
+      margin: 0px; }
       header .menu-container ul li {
         margin-right: 5px;
         display: inline-block;
@@ -119,7 +120,7 @@ header {
         border-radius: 0px;
         display: none; }
       header .menu-container .menu_popup {
-        background-color: #292929;
+        background-color: #131313;
         display: block;
         position: absolute;
         display: flex;
@@ -307,7 +308,7 @@ main {
         align-items: center;
         gap: 20px; } }
   main .item-productos {
-    background-color: #292929;
+    background-color: #131313;
     border-radius: 30px;
     padding: 20px;
     width: 320px;
@@ -350,7 +351,7 @@ main {
     gap: 10px; }
     main .lista-planes--plan {
       width: 350px;
-      background: linear-gradient(to bottom, #292929, #141414);
+      background: linear-gradient(to bottom, #131313, #1B1A1A);
       text-align: center;
       border-radius: 30px;
       box-shadow: 2px 2px 6px rgba(36, 36, 36, 0.589);
@@ -369,6 +370,23 @@ main {
           color: #8f46f0;
           font-weight: bold;
           font-size: 2rem; }
+  main .section-blog {
+    width: 60%; }
+    main .section-blog article {
+      padding: 2rem;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin-bottom: 5rem;
+      background-color: #131313; }
+      main .section-blog article div img {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 5rem; }
+    @media screen and (max-width: 1200px) {
+      main .section-blog {
+        width: 100%; }
+        main .section-blog article {
+          width: 100%; } }
 
 footer {
   flex: 1;
@@ -376,9 +394,9 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
-  footer .container {
+  footer .contenedor {
     border-radius: 100px;
-    background-color: #292929;
+    background-color: #131313;
     display: flex;
     padding: 1.2rem;
     min-width: 500px;
@@ -387,7 +405,7 @@ footer {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.603);
     transition: 0.1s;
     margin-right: 10px; }
-    footer .container a li:hover {
+    footer .contenedor a li:hover {
       transform: scale(1.08);
       transition: 0.1s; }
   @media screen and (max-width: 1200px) {
